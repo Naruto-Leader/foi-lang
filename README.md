@@ -62,7 +62,7 @@ It shouldn't take reading thousands of pages of books or watching months of work
 
 ```java
 defn getFavoriteMovies(userID) ^(IO ~<< {
-    def movieIDs:: fetch(`"/movies/`userID`");
+    def movieIDs:: fetch(`"/movies/`userID`");     
     def movieData:: all(
         movieIDs ~map (movieID) {
             fetch(`"/movie/`movieID`")
